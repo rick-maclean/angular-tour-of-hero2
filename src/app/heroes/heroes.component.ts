@@ -20,15 +20,7 @@ export class HeroesComponent implements OnInit {
   selectedHero: Hero;
 
   // heroes = HEROES;
-  heroes:  Hero[];
-
-  getHeroes(): void {
-    this.heroes = this.heroService.getHeroes();
-  }
-
-  onSelectHero(heroClicked: Hero): void {
-    this.selectedHero = heroClicked;
-  }
+  heroes:  Hero[];  // declare it as an array of Hero
 
   constructor(private heroService: HeroService) { }
 
@@ -36,4 +28,15 @@ export class HeroesComponent implements OnInit {
     this.getHeroes();
   }
 
+  getHeroesOLD(): void {
+    this.heroes = this.heroService.getHeroes();
+  }
+
+  getHeroes(): void {
+    this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes);
+  }
+
+  onSelectHero(heroClicked: Hero): void {
+    this.selectedHero = heroClicked;
+  }
 }
