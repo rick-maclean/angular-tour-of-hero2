@@ -1,0 +1,13 @@
+<br>
+<p>
+  hero-detail works!
+</p>
+<div *ngIf="heroDetails">
+  <h2>{{heroDetails.name | lowercase }} lower Details</h2>
+  <div><span>id: </span>{{heroDetails.id}}</div>
+  <div>
+    <label> name:
+      <input [(ngModel)]="heroDetails.name" placeholder="selectedHero Placeholder">
+    </label>
+  </div>
+</div>
