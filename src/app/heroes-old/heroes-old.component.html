@@ -1,0 +1,28 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Panel Heading</div>
+  <div class="panel-body">Panel Content</div>
+</div>
+
+
+<p>
+  heroes-old works!
+</p>
+
+<ul class="heroes">
+  Single Variable Hero:
+  <li>
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+
+<!-- This is some of the older parts of the tutorial-->
+<h4>{{ hero1 }} ==> hero1</h4>
+<h2>{{ hero.name | uppercase }} Details:</h2>
+<div><span>id: </span>{{hero.id}}</div>
+<div><span>name as label: </span>{{hero.name}}</div>
+
+<div>
+  <label>name as input box:
+    <input [(ngModel)]="hero.name" placeholder="type name...">
+  </label>
+</div>

@@ -1,11 +1,5 @@
 <h2>My Heroes Are...</h2>
 <ul class="heroes">
-  Single Variable Hero:
-  <li>
-    <span class="badge">{{hero.id}}</span> {{hero.name}}
-  </li>
-</ul>
-<ul class="heroes">
   Heros from mock-heroes:
   <li *ngFor="let hero of heroes"
       [class.selected]="hero === selectedHero"
@@ -14,17 +8,10 @@
   </li>
 </ul>
 
+<!-- This is the insertion of the hero-detail component template and we are bidning selectedHero to
+    heroDetails in that subcomponent. -->
 <app-hero-detail [heroDetails]="selectedHero"></app-hero-detail>
 
-<h4>{{ hero1 }} ==> hero1</h4>
-<h2>{{ hero.name | uppercase }} Details:</h2>
-<div><span>id: </span>{{hero.id}}</div>
-<div><span>name as label: </span>{{hero.name}}</div>
 
-<div>
-  <label>name as input box:
-    <input [(ngModel)]="hero.name" placeholder="type name...">
-  </label>
-</div>
 
 
